@@ -1,63 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Videoteca del Baile</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111111"><title>Videoteca del Baile</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#111;color:#eee}
-header{padding:35px 20px 22px;text-align:center;border-bottom:1px solid #292929}
-h1{margin:0 0 8px;font-size:clamp(2rem,6vw,4rem)}
-main{width:min(1100px,calc(100% - 30px));margin:28px auto}
-.search{width:100%;padding:14px 16px;border:1px solid #333;border-radius:12px;background:#1b1b1b;color:#fff;font-size:1rem}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 25px}
-.filter{padding:9px 14px;border-radius:999px;border:1px solid #3a3a3a;background:#1b1b1b;color:#ddd;cursor:pointer}
-.filter.active{background:#eee;color:#111}
+header{padding:38px 18px 24px;text-align:center;border-bottom:1px solid #292929}
+h1{margin:0 0 8px;font-size:clamp(2rem,8vw,4.5rem)}.subtitle{margin:0;color:#999}
+main{width:min(1180px,calc(100% - 28px));margin:26px auto 60px}
+.search{width:100%;padding:15px 17px;border-radius:12px;border:1px solid #333;background:#1b1b1b;color:#fff;font-size:1rem}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:16px 0 10px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}
+.filter{flex:0 0 auto;border:1px solid #3a3a3a;background:#1b1b1b;color:#ddd;padding:9px 14px;border-radius:999px;cursor:pointer}
+.filter.active{background:#eee;color:#111}.count{margin:12px 0 14px;color:#888;font-size:.9rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:15px}
-.card{display:block;text-decoration:none;color:inherit;background:#1b1b1b;border:1px solid #292929;border-radius:14px;overflow:hidden}
-.preview{aspect-ratio:16/10;background:#252525;display:grid;place-items:center;font-size:3rem}
-.info{padding:15px}.info h2{margin:0 0 8px;font-size:1.15rem}.info p{margin:5px 0;color:#aaa}
+.card{display:block;overflow:hidden;border:1px solid #292929;border-radius:15px;background:#1a1a1a;color:inherit;text-decoration:none;transition:.15s}
+.card:hover{transform:translateY(-3px);border-color:#555}
+.preview{aspect-ratio:16/10;display:grid;place-items:center;background:radial-gradient(circle,#333,#1d1d1d)}
+.play{display:grid;place-items:center;width:58px;height:58px;padding-left:4px;border:2px solid #ddd;border-radius:50%;font-size:1.65rem}
+.info{padding:14px 15px 16px}.title{margin:0 0 8px;font-size:1.1rem}.teachers{margin:0 0 6px}.meta{margin:0;color:#888;font-size:.88rem}
+.empty{grid-column:1/-1;padding:40px 5px;color:#888;text-align:center}
+@media(max-width:600px){header{padding-top:28px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.info{padding:12px}.title{font-size:1rem}.teachers,.meta{font-size:.82rem}.play{width:50px;height:50px}}
+@media(max-width:380px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><h1>VIDEOTECA DEL BAILE</h1><div>Prueba de reproductor interno</div></header>
+<header><h1>VIDEOTECA DEL BAILE</h1><p class="subtitle">Nuestra biblioteca de figuras y clases</p></header>
 <main>
-<input id="search" class="search" placeholder="Buscar vídeo, profesor, baile...">
-<div id="filters" class="filters"></div>
-<div id="grid" class="grid"></div>
+<input id="search" class="search" type="search" placeholder="Buscar profesor, figura, baile..." autocomplete="off">
+<div id="filters" class="filters"></div><div id="count" class="count"></div><div id="grid" class="grid"></div>
 </main>
 <script src="data.js"></script>
 <script>
-const grid=document.getElementById("grid"), filters=document.getElementById("filters"), search=document.getElementById("search");
+const grid=document.getElementById("grid"),filters=document.getElementById("filters"),search=document.getElementById("search"),count=document.getElementById("count");
 let profesorActivo="Todos";
 const profesores=["Todos",...[...new Set(videos.flatMap(v=>v.profesores))].sort((a,b)=>a.localeCompare(b,"es"))];
-
-function drawFilters(){
-  filters.innerHTML="";
-  profesores.forEach(p=>{
-    const b=document.createElement("button");
-    b.className="filter"+(p===profesorActivo?" active":"");
-    b.textContent=p;
-    b.onclick=()=>{profesorActivo=p;drawFilters();render()};
-    filters.appendChild(b);
-  });
-}
-function render(){
-  const q=search.value.toLowerCase().trim();
-  grid.innerHTML="";
-  videos.filter(v=>{
-    const text=[v.titulo,v.baile,v.tipo,...v.profesores,...(v.tags||[])].join(" ").toLowerCase();
-    return (profesorActivo==="Todos"||v.profesores.includes(profesorActivo)) && text.includes(q);
-  }).forEach(v=>{
-    const a=document.createElement("a");
-    a.className="card";
-    a.href=`player.html?id=${encodeURIComponent(v.id)}`;
-    a.innerHTML=`<div class="preview">▶</div><div class="info"><h2>${v.titulo}</h2><p>${v.profesores.join(" · ")}</p><p>${v.baile} · ${v.tipo}</p></div>`;
-    grid.appendChild(a);
-  });
-}
-search.addEventListener("input",render);
-drawFilters(); render();
-</script>
-</body>
-</html>
+function crearFiltros(){filters.innerHTML="";profesores.forEach(p=>{const b=document.createElement("button");b.className="filter"+(p===profesorActivo?" active":"");b.textContent=p;b.onclick=()=>{profesorActivo=p;crearFiltros();render()};filters.appendChild(b)})}
+function coincide(v,q){return[v.titulo,v.baile,v.tipo,...v.profesores,...(v.tags||[])].join(" ").toLowerCase().includes(q.toLowerCase())}
+function render(){const q=search.value.trim();const rs=videos.filter(v=>(profesorActivo==="Todos"||v.profesores.includes(profesorActivo))&&coincide(v,q));count.textContent=`${rs.length} vídeo${rs.length===1?"":"s"}`;grid.innerHTML="";
+if(!rs.length){grid.innerHTML='<div class="empty">No hay vídeos que coincidan con la búsqueda.</div>';return}
+rs.forEach(v=>{const a=document.createElement("a");a.className="card";a.href=v.url||"#";if(v.url&&v.url!=="#"){a.target="_blank";a.rel="noopener noreferrer"}
+a.innerHTML=`<div class="preview"><div class="play">▶</div></div><div class="info"><h2 class="title">${v.titulo}</h2><p class="teachers">${v.profesores.join(" · ")}</p><p class="meta">${v.baile} · ${v.tipo}</p></div>`;
+if(!v.url||v.url==="#")a.onclick=e=>{e.preventDefault();alert("Este vídeo todavía no tiene enlace de Google Drive.")};grid.appendChild(a)})}
+search.addEventListener("input",render);crearFiltros();render();
+</script></body></html>
