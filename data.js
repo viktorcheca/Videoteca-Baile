@@ -51,6 +51,6 @@ const videos = [
     profesores: ["Ceci", "Kike"],
     tipo: "Figura",
     tags: [],
-    url: "#https://photos.google.com/u/0/album/AF1QipNyBmCvle78hxOIRQa1wRwuMoGbCFuLAGPDINxG/photo/AF1QipNF3n9AW7UIJ7Ve0ZpPPh2xmoQrr2dLErcDatxG?hl=es"
+    url: "https://photos.google.com/u/0/album/AF1QipNyBmCvle78hxOIRQa1wRwuMoGbCFuLAGPDINxG/photo/AF1QipNF3n9AW7UIJ7Ve0ZpPPh2xmoQrr2dLErcDatxG?hl=es"
   }
 ];
