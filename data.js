@@ -6,7 +6,7 @@ const videos = [
     profesores: ["Adrián", "Aroa"],
     tipo: "Figura",
     tags: [],
-    url: "https://photos.google.com/u/0/album/AF1QipNyBmCvle78hxOIRQa1wRwuMoGbCFuLAGPDINxG/photo/AF1QipOrgnhQh4aXrdA92l1idO4K5uM2H6zUMKyPO9rP?hl=es"
+    url: "https://drive.google.com/file/d/19b5CAl-BxzVrmfuTfng-OTkVfgkAfzI1/view?usp=sharing"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const videos = [
     profesores: ["Jon", "Gemma"],
     tipo: "Figura",
     tags: [],
-    url: "https://photos.google.com/u/0/album/AF1QipNyBmCvle78hxOIRQa1wRwuMoGbCFuLAGPDINxG/photo/AF1QipMPNbVpjFYdzoUrcCfDpMazu7T4VtkhOAq8LfNX?hl=es"
+    url: "https://drive.google.com/file/d/1LvNx2bLFWhMf-5aZJmBVmMXFhPVTBYml/view?usp=sharing"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const videos = [
     profesores: ["Jon", "Gemma"],
     tipo: "Figura",
     tags: [],
-    url: "https://photos.google.com/u/0/album/AF1QipNyBmCvle78hxOIRQa1wRwuMoGbCFuLAGPDINxG/photo/AF1QipPhbTuBVj6Pdmi1I1Fu594UkeHwmWqB6Fz2EkYN?hl=es"
+    url: "https://drive.google.com/file/d/1QeGVdR8nzt0v0wJW0XiaE-s1IWiYneE5/view?usp=sharing"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const videos = [
     profesores: ["Jon", "Gemma"],
     tipo: "Figura",
     tags: [],
-    url: "https://photos.google.com/u/0/album/AF1QipNyBmCvle78hxOIRQa1wRwuMoGbCFuLAGPDINxG/photo/AF1QipOrsBEMcKPFWbWWD3Cp0Esrw6JD-NgLrxIXqvbO?hl=es"
+    url: "https://drive.google.com/file/d/1YXFIFXPllXjV5Z5V6H3a_gB7lLaQbhj1/view?usp=sharing"
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const videos = [
     profesores: ["Jon", "Ceci"],
     tipo: "Figura",
     tags: [],
-    url: "https://photos.google.com/u/0/album/AF1QipNyBmCvle78hxOIRQa1wRwuMoGbCFuLAGPDINxG/photo/AF1QipNQ6seDDngpbaim1c8toErZfYrhqjsS2D98Vvij?hl=es"
+    url: "https://drive.google.com/file/d/1uLwPDtZ0unnhJpmE7ic2A0REEXdWtffe/view?usp=sharing"
   },
   {
     id: 6,
@@ -51,6 +51,6 @@ const videos = [
     profesores: ["Ceci", "Kike"],
     tipo: "Figura",
     tags: [],
-    url: "https://photos.google.com/u/0/album/AF1QipNyBmCvle78hxOIRQa1wRwuMoGbCFuLAGPDINxG/photo/AF1QipNF3n9AW7UIJ7Ve0ZpPPh2xmoQrr2dLErcDatxG?hl=es"
+    url: "https://drive.google.com/file/d/1eOwh2eQ36f55IaL_vLt8o0k6qUhEPyTO/view?usp=sharing"
   }
 ];
