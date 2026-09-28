@@ -7,13 +7,10 @@
   --surface: #15151b;
   --surface-2: #1d1d25;
   --border: rgba(255,255,255,.08);
-
   --text: #f7f7fa;
   --muted: #92929f;
-
   --accent: #c64cff;
   --accent-2: #ff4f91;
-
   --radius: 18px;
 }
 
@@ -27,9 +24,6 @@ body {
   min-height: 100vh;
 }
 
-
-/* ───────── HEADER ───────── */
-
 header {
   padding: 55px 18px 32px;
   text-align: center;
@@ -41,14 +35,7 @@ h1 {
   font-size: clamp(2.2rem, 6vw, 4.5rem);
   font-weight: 800;
   letter-spacing: .035em;
-
-  background: linear-gradient(
-    90deg,
-    #ffffff 20%,
-    #e9c8ff 50%,
-    #ffffff 80%
-  );
-
+  background: linear-gradient(90deg, #fff 20%, #e9c8ff 50%, #fff 80%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -60,34 +47,21 @@ h1 {
   font-size: 1rem;
 }
 
-
-/* ───────── CONTENIDO ───────── */
-
 main {
   width: min(1180px, calc(100% - 30px));
   margin: 30px auto 70px;
 }
 
-
-/* ───────── BUSCADOR ───────── */
-
 .search {
   width: 100%;
   padding: 16px 19px;
-
   border-radius: 14px;
   border: 1px solid var(--border);
-
   background: rgba(255,255,255,.045);
   color: white;
-
   font-size: 1rem;
   outline: none;
-
-  transition:
-    border-color .2s,
-    background .2s,
-    box-shadow .2s;
+  transition: border-color .2s, background .2s, box-shadow .2s;
 }
 
 .search::placeholder {
@@ -97,23 +71,14 @@ main {
 .search:focus {
   background: rgba(255,255,255,.065);
   border-color: rgba(198,76,255,.6);
-
-  box-shadow:
-    0 0 0 3px rgba(198,76,255,.10),
-    0 8px 30px rgba(0,0,0,.25);
+  box-shadow: 0 0 0 3px rgba(198,76,255,.10), 0 8px 30px rgba(0,0,0,.25);
 }
-
-
-/* ───────── FILTROS ───────── */
 
 .filters {
   display: flex;
   gap: 9px;
-
   overflow-x: auto;
-
   padding: 17px 0 11px;
-
   scrollbar-width: none;
 }
 
@@ -123,24 +88,14 @@ main {
 
 .filter {
   flex: 0 0 auto;
-
   border: 1px solid var(--border);
-
   background: var(--surface);
   color: #d5d5dd;
-
   padding: 9px 15px;
-
   border-radius: 999px;
-
   cursor: pointer;
-
   font-weight: 500;
-
-  transition:
-    transform .15s,
-    background .15s,
-    border-color .15s;
+  transition: transform .15s, background .15s, border-color .15s;
 }
 
 .filter:hover {
@@ -151,185 +106,105 @@ main {
 
 .filter.active {
   border-color: transparent;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--accent),
-      var(--accent-2)
-    );
-
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: white;
-
-  box-shadow:
-    0 5px 18px rgba(198,76,255,.22);
+  box-shadow: 0 5px 18px rgba(198,76,255,.22);
 }
-
-
-/* ───────── CONTADOR ───────── */
 
 .count {
   margin: 13px 0 15px;
-
   color: var(--muted);
-
   font-size: .9rem;
 }
 
-
-/* ───────── GRID ───────── */
-
 .grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fill, minmax(220px, 1fr));
-
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 18px;
 }
 
-
-/* ───────── TARJETAS ───────── */
-
 .card {
   display: block;
-
   overflow: hidden;
-
   border: 1px solid var(--border);
-
   border-radius: var(--radius);
-
   background: var(--surface);
-
   color: inherit;
   text-decoration: none;
-
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.18);
-
-  transition:
-    transform .2s ease,
-    border-color .2s ease,
-    box-shadow .2s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,.18);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-
-  border-color:
-    rgba(198,76,255,.35);
-
-  box-shadow:
-    0 16px 40px rgba(0,0,0,.35),
-    0 0 25px rgba(198,76,255,.07);
+  border-color: rgba(198,76,255,.35);
+  box-shadow: 0 16px 40px rgba(0,0,0,.35), 0 0 25px rgba(198,76,255,.07);
 }
 
-
-/* ───────── PREVIEW ───────── */
-
+/* PREVIEW */
 .preview {
   position: relative;
-
   aspect-ratio: 16 / 10;
-
   display: grid;
   place-items: center;
-
-  background:
-    radial-gradient(
-      circle at 50% 40%,
-      #353541,
-      #202027 55%,
-      #19191f
-    );
-
+  background: radial-gradient(circle at 50% 40%, #353541, #202027 55%, #19191f);
   overflow: hidden;
 }
 
-
-/* pequeño halo */
-
-.preview::before {
-  content: "";
-
+/* Logo completo, siempre reescalado dentro de la tarjeta */
+.place-logo {
   position: absolute;
-
-  width: 150px;
-  height: 150px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(198,76,255,.13),
-      transparent 65%
-    );
-
-  opacity: 0;
-
-  transform: scale(.8);
-
-  transition:
-    opacity .25s,
-    transform .25s;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  z-index: 0;
+  transition: transform .25s ease, filter .25s ease;
 }
 
-.card:hover .preview::before {
-  opacity: 1;
-  transform: scale(1);
+/* Oscurecido mínimo para que el play sea visible sin matar el logo */
+.preview-logo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.10);
+  z-index: 1;
+  pointer-events: none;
 }
 
-
-/* ───────── PLAY ───────── */
-
+/* PLAY SIEMPRE ENCIMA */
 .play {
   position: relative;
-  z-index: 2;
-
+  z-index: 3;
   display: grid;
   place-items: center;
-
   width: 62px;
   height: 62px;
-
   padding-left: 4px;
-
-  border: 1px solid rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.75);
   border-radius: 50%;
-
-  background: rgba(10,10,14,.55);
-
-  backdrop-filter: blur(8px);
-
+  background: rgba(10,10,14,.58);
+  color: white;
+  backdrop-filter: blur(5px);
   font-size: 1.5rem;
+  line-height: 1;
+  box-shadow: 0 4px 18px rgba(0,0,0,.28);
+  transition: transform .2s, background .2s, border-color .2s, box-shadow .2s;
+}
 
-  transition:
-    transform .2s,
-    background .2s,
-    border-color .2s,
-    box-shadow .2s;
+.card:hover .place-logo {
+  transform: scale(1.025);
+  filter: brightness(.78);
 }
 
 .card:hover .play {
   transform: scale(1.08);
-
   border-color: transparent;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--accent),
-      var(--accent-2)
-    );
-
-  box-shadow:
-    0 8px 30px rgba(198,76,255,.35);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 8px 30px rgba(198,76,255,.35);
 }
-
-
-/* ───────── INFO ───────── */
 
 .info {
   padding: 16px 16px 17px;
@@ -337,47 +212,31 @@ main {
 
 .title {
   margin: 0 0 8px;
-
   font-size: 1.08rem;
   font-weight: 700;
-
   color: white;
 }
 
 .teachers {
   margin: 0 0 7px;
-
   color: #dedee5;
-
   font-size: .94rem;
 }
 
 .meta {
-  margin: 0;
-
+  margin: 0 0 3px;
   color: var(--muted);
-
   font-size: .86rem;
 }
 
-
-/* ───────── SIN RESULTADOS ───────── */
-
 .empty {
   grid-column: 1 / -1;
-
   padding: 50px 5px;
-
   color: var(--muted);
-
   text-align: center;
 }
 
-
-/* ───────── MÓVIL ───────── */
-
 @media (max-width: 600px) {
-
   header {
     padding: 32px 18px 24px;
   }
@@ -391,9 +250,7 @@ main {
   }
 
   .grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 11px;
   }
 
@@ -417,18 +274,12 @@ main {
   .play {
     width: 50px;
     height: 50px;
-
     font-size: 1.25rem;
   }
 }
 
-
-/* móviles muy estrechos */
-
 @media (max-width: 370px) {
-
   .grid {
     grid-template-columns: 1fr;
   }
-
 }
