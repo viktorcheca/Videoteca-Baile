@@ -1,0 +1,35 @@
+/* AÑADIR AL FINAL DE style.css */
+
+.preview-logo {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.place-logo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.preview-logo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.12);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.preview-logo .play {
+  z-index: 2;
+}
+
+.card:hover .place-logo {
+  transform: scale(1.035);
+  filter: brightness(.78);
+}

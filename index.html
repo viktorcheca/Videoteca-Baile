@@ -7,240 +7,119 @@
   <title>Videoteca del Baile</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <header>
   <h1>VIDEOTECA DEL BAILE</h1>
   <p class="subtitle">Nuestra biblioteca de figuras y clases</p>
 </header>
-
 <main>
-  <input
-    id="search"
-    class="search"
-    type="search"
-    placeholder="Buscar nombre, artista, estilo, lugar..."
-    autocomplete="off"
-  >
-
+  <input id="search" class="search" type="search" placeholder="Buscar nombre, artista, estilo, lugar..." autocomplete="off">
   <div class="filters" id="filtroEstilo"></div>
   <div class="filters" id="filtroSubestilo"></div>
   <div class="filters" id="filtroArtista"></div>
-
   <div id="count" class="count"></div>
   <div id="grid" class="grid"></div>
 </main>
 
 <script src="data.js"></script>
-
 <script>
 const grid = document.getElementById("grid");
 const search = document.getElementById("search");
 const count = document.getElementById("count");
-
 const filtroEstilo = document.getElementById("filtroEstilo");
 const filtroSubestilo = document.getElementById("filtroSubestilo");
 const filtroArtista = document.getElementById("filtroArtista");
 
-let seleccion = {
-  estilo: "Todos",
-  subestilo: "Todos",
-  artista: "Todos"
+const miniaturasLugar = {
+  "Harmony": "img/Harmony.png",
+  "ETS": "img/ETS.png",
+  "Manisero": "img/Manisero.png",
+  "Dirrty": "img/Dirrty.png",
+  "Taller": "img/Taller.png",
+  "Congreso": "img/Congreso.png",
+  "The island": "img/The island.png"
 };
 
+let seleccion = { estilo: "Todos", subestilo: "Todos", artista: "Todos" };
+
 function unicos(lista) {
-  return [...new Set(lista.filter(Boolean))]
-    .sort((a, b) => a.localeCompare(b, "es"));
+  return [...new Set(lista.filter(Boolean))].sort((a,b) => a.localeCompare(b, "es"));
 }
-
-function coincideTexto(video, texto) {
+function esc(t) {
+  return String(t ?? "").replaceAll("&","&amp;").replaceAll("<","&lt;")
+    .replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+}
+function coincideTexto(v, texto) {
   if (!texto) return true;
-
-  const contenido = [
-    video.id,
-    video.nombre,
-    video.estilo,
-    video.subestilo,
-    video.lugar,
-    ...(video.artistas || [])
-  ]
-    .join(" ")
-    .toLowerCase();
-
-  return contenido.includes(texto.toLowerCase());
+  return [v.id,v.nombre,v.estilo,v.subestilo,v.lugar,...(v.artistas||[])]
+    .join(" ").toLowerCase().includes(texto.toLowerCase());
 }
-
-function coincideFiltros(video, ignorar = "") {
-  if (
-    ignorar !== "estilo" &&
-    seleccion.estilo !== "Todos" &&
-    video.estilo !== seleccion.estilo
-  ) return false;
-
-  if (
-    ignorar !== "subestilo" &&
-    seleccion.subestilo !== "Todos" &&
-    video.subestilo !== seleccion.subestilo
-  ) return false;
-
-  if (
-    ignorar !== "artista" &&
-    seleccion.artista !== "Todos" &&
-    !(video.artistas || []).includes(seleccion.artista)
-  ) return false;
-
+function coincideFiltros(v, ignorar="") {
+  if (ignorar!=="estilo" && seleccion.estilo!=="Todos" && v.estilo!==seleccion.estilo) return false;
+  if (ignorar!=="subestilo" && seleccion.subestilo!=="Todos" && v.subestilo!==seleccion.subestilo) return false;
+  if (ignorar!=="artista" && seleccion.artista!=="Todos" && !(v.artistas||[]).includes(seleccion.artista)) return false;
   return true;
 }
-
-function crearBotones(contenedor, valores, tipo, etiqueta) {
-  contenedor.innerHTML = "";
-
-  const opciones = ["Todos", ...valores];
-
-  opciones.forEach(valor => {
-    const boton = document.createElement("button");
-    boton.className =
-      "filter" + (seleccion[tipo] === valor ? " active" : "");
-
-    boton.textContent =
-      valor === "Todos" ? `${etiqueta}: Todos` : valor;
-
-    boton.addEventListener("click", () => {
-      seleccion[tipo] = valor;
-      normalizarSeleccion();
-      actualizar();
-    });
-
-    contenedor.appendChild(boton);
-  });
-}
-
 function valoresDisponibles(tipo) {
-  const base = videos.filter(video => coincideFiltros(video, tipo));
-
-  if (tipo === "estilo") {
-    return unicos(base.map(v => v.estilo));
-  }
-
-  if (tipo === "subestilo") {
-    return unicos(base.map(v => v.subestilo));
-  }
-
-  if (tipo === "artista") {
-    return unicos(base.flatMap(v => v.artistas || []));
-  }
-
-  return [];
+  const base = videos.filter(v => coincideFiltros(v,tipo));
+  if (tipo==="estilo") return unicos(base.map(v=>v.estilo));
+  if (tipo==="subestilo") return unicos(base.map(v=>v.subestilo));
+  return unicos(base.flatMap(v=>v.artistas||[]));
 }
-
 function normalizarSeleccion() {
-  let cambio = true;
-
-  while (cambio) {
-    cambio = false;
-
-    for (const tipo of ["estilo", "subestilo", "artista"]) {
-      if (seleccion[tipo] === "Todos") continue;
-
-      const disponibles = valoresDisponibles(tipo);
-
-      if (!disponibles.includes(seleccion[tipo])) {
-        seleccion[tipo] = "Todos";
-        cambio = true;
+  let cambio=true;
+  while(cambio){
+    cambio=false;
+    for(const tipo of ["estilo","subestilo","artista"]){
+      if(seleccion[tipo]!=="Todos" && !valoresDisponibles(tipo).includes(seleccion[tipo])){
+        seleccion[tipo]="Todos"; cambio=true;
       }
     }
   }
 }
-
-function renderFiltros() {
-  crearBotones(
-    filtroEstilo,
-    valoresDisponibles("estilo"),
-    "estilo",
-    "Estilo"
-  );
-
-  crearBotones(
-    filtroSubestilo,
-    valoresDisponibles("subestilo"),
-    "subestilo",
-    "Subestilo"
-  );
-
-  crearBotones(
-    filtroArtista,
-    valoresDisponibles("artista"),
-    "artista",
-    "Artista"
-  );
+function crearBotones(el, valores, tipo, etiqueta) {
+  el.innerHTML="";
+  ["Todos",...valores].forEach(valor=>{
+    const b=document.createElement("button");
+    b.className="filter"+(seleccion[tipo]===valor?" active":"");
+    b.textContent=valor==="Todos"?`${etiqueta}: Todos`:valor;
+    b.onclick=()=>{seleccion[tipo]=valor; actualizar();};
+    el.appendChild(b);
+  });
 }
-
-function renderVideos() {
-  const texto = search.value.trim();
-
-  const resultados = videos.filter(video =>
-    coincideFiltros(video) && coincideTexto(video, texto)
-  );
-
-  count.textContent =
-    `${resultados.length} vídeo${resultados.length === 1 ? "" : "s"}`;
-
-  grid.innerHTML = "";
-
-  if (!resultados.length) {
-    grid.innerHTML =
-      '<div class="empty">No hay vídeos que coincidan con estos filtros.</div>';
-    return;
+function renderFiltros(){
+  crearBotones(filtroEstilo,valoresDisponibles("estilo"),"estilo","Estilo");
+  crearBotones(filtroSubestilo,valoresDisponibles("subestilo"),"subestilo","Subestilo");
+  crearBotones(filtroArtista,valoresDisponibles("artista"),"artista","Artista");
+}
+function renderVideos(){
+  const resultados=videos.filter(v=>coincideFiltros(v)&&coincideTexto(v,search.value.trim()));
+  count.textContent=`${resultados.length} vídeo${resultados.length===1?"":"s"}`;
+  grid.innerHTML="";
+  if(!resultados.length){
+    grid.innerHTML='<div class="empty">No hay vídeos que coincidan con estos filtros.</div>'; return;
   }
-
-  resultados.forEach(video => {
-    const card = document.createElement("a");
-
-    card.className = "card";
-    card.href = video.url || "#";
-
-    if (video.url && video.url !== "#") {
-      card.target = "_blank";
-      card.rel = "noopener noreferrer";
-    }
-
-    const artistas = (video.artistas || []).join(" · ");
-    const detalle = [video.estilo, video.subestilo]
-      .filter(Boolean)
-      .join(" · ");
-
-    card.innerHTML = `
-      <div class="preview">
-        <div class="play">▶</div>
-      </div>
-
-      <div class="info">
-        <h2 class="title">${video.nombre || `Vídeo ${video.id}`}</h2>
-        <p class="teachers">${artistas}</p>
-        <p class="meta">${detalle}</p>
-        ${video.lugar ? `<p class="meta">📍 ${video.lugar}</p>` : ""}
-      </div>
-    `;
-
-    if (!video.url || video.url === "#") {
-      card.addEventListener("click", e => {
-        e.preventDefault();
-        alert("Este vídeo todavía no tiene enlace de Google Drive.");
-      });
-    }
-
+  resultados.forEach(v=>{
+    const card=document.createElement("a");
+    card.className="card"; card.href=v.url||"#";
+    if(v.url&&v.url!=="#"){card.target="_blank"; card.rel="noopener noreferrer";}
+    const artistas=(v.artistas||[]).join(" · ");
+    const detalle=[v.estilo,v.subestilo].filter(Boolean).join(" · ");
+    const logo=miniaturasLugar[v.lugar];
+    const preview=logo
+      ? `<div class="preview preview-logo"><img class="place-logo" src="${encodeURI(logo)}" alt="${esc(v.lugar)}" loading="lazy"><div class="play">▶</div></div>`
+      : `<div class="preview"><div class="play">▶</div></div>`;
+    card.innerHTML=`${preview}<div class="info">
+      <h2 class="title">${esc(v.nombre||`Vídeo ${v.id}`)}</h2>
+      <p class="teachers">${esc(artistas)}</p>
+      <p class="meta">${esc(detalle)}</p>
+      ${v.lugar?`<p class="meta">📍 ${esc(v.lugar)}</p>`:""}
+    </div>`;
     grid.appendChild(card);
   });
 }
-
-function actualizar() {
-  normalizarSeleccion();
-  renderFiltros();
-  renderVideos();
-}
-
-search.addEventListener("input", renderVideos);
-
+function actualizar(){ normalizarSeleccion(); renderFiltros(); renderVideos(); }
+search.addEventListener("input",renderVideos);
 actualizar();
 </script>
 </body>
