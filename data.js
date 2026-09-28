@@ -4,7 +4,7 @@
 const videos = [
   {
     "id": 1,
-    "url": "https://drive.google.com/file/d/19b5CAl-BxzVrmfuTfng-OTkVfgkAfzI1/view?usp=sharing",
+    "url": "https://drive.google.com/file/d/1olPnCjf_VbjuLGIA5LRe2l0WpCtgAZzY/view?usp=sharing",
     "estilo": "Bachata",
     "subestilo": "Sensual",
     "nombre": "Taller Manisero",
@@ -262,6 +262,462 @@ const videos = [
     "nombre": "contragiros, giros copas y salsa",
     "artistas": [
       "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 23,
+    "url": "https://drive.google.com/file/d/1J8-e1O5oNUaynwDHCISLkopkHtBuwU7c/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "El cross derecha y copa magico",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 24,
+    "url": "https://drive.google.com/file/d/1lbPV3i865cUUTK7ptlznSiW2aXEe4lK7/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "El mambo y un titanic con vuelta chico",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 25,
+    "url": "https://drive.google.com/file/d/13cPqk1rafI5L1SnSawsMq3gPhmYmIRzM/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Medio Titanic i vuelta",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 26,
+    "url": "https://drive.google.com/file/d/1F1jYqjswvkbNSTmOh-wXBkRsEgsj3ia7/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Lanzamiento penza y lock abierto",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 27,
+    "url": "https://drive.google.com/file/d/15HnF7fTKhuUeF4G9lM53duo66dgRQfZm/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Cross reverso de la mano",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 28,
+    "url": "https://drive.google.com/file/d/1gE3OTcjCLIfoTNfcTi8b3hMNNVfFbvjo/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Open de Salsa",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 29,
+    "url": "https://drive.google.com/file/d/1e1JjMnWtBxAZLUAKku3bB1dmJAeiv2Z_/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Open y giro de la chica",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 30,
+    "url": "https://drive.google.com/file/d/1G9ODPmbZdv0zZ9ZYO-xRwAfuvqV9TjsE/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Sombrero y contragiro",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 31,
+    "url": "https://drive.google.com/file/d/1K61q9DxqXwB5ZbjLT565ctSDTnMwnPWW/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Chico giro con lanzamiento y titanic",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 32,
+    "url": "https://drive.google.com/file/d/1uReMv9jYZHMwF0P4GBVHp9899amTSLcZ/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Salsa bien hilada basica",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 33,
+    "url": "https://drive.google.com/file/d/1NNJF73i8-Xq1YSil1OjfRQdEBQqwPZsX/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Giros complejos y paradas",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 34,
+    "url": "https://drive.google.com/file/d/1hxMfklLsv9zUofZev9z8rKYwkDi2o6mV/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Giro de chico en 1 para cros",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 35,
+    "url": "https://drive.google.com/file/d/1BfcW7-gBgyQqk7WUdIARQoJUtg4BNGdy/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Open titanic por abajo",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 36,
+    "url": "https://drive.google.com/file/d/1v4fZtBmyggIfwpbSgk314CQSEvhadyGr/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Gira la chica alrededor mas hilado",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 37,
+    "url": "https://drive.google.com/file/d/1SOZIlKxrOKwPLCsD_12rP_x2t3tdad9H/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Open con giro por fuera y  engaño de copita",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 38,
+    "url": "https://drive.google.com/file/d/1DjHb9A-BSwxvVHdQoecidah0c8c0UYBm/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Vueltas chicas con enrrolles y 4 pivot",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 39,
+    "url": "https://drive.google.com/file/d/1nwxAJYJdHEDoXOC4YEQl20gEBv-bF6H7/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Lanzamiento brazo, nudo, copa sha",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 40,
+    "url": "https://drive.google.com/file/d/1s-ZoOq6G_upDiFGd0cJh5xvePY6_4Jwb/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "sombrero cros open de espaldas",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 41,
+    "url": "https://drive.google.com/file/d/1f4TODxS6cCbdOAFdn0E4FWVBST2j7hsc/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "control reverso vueltas cintura y copa 8 uno",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 42,
+    "url": "https://drive.google.com/file/d/10DJaiZwaj50J87bUL5Y6be_3jzSfMDj1/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Traigo, peinada, engaño, giro chico, peinada",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 43,
+    "url": "https://drive.google.com/file/d/1KPltMswchF87nVaHKV493cHP1NqUmJqX/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "una vuelta a dos manos adornada",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 44,
+    "url": "https://drive.google.com/file/d/1z9PkF6CYVL9kLkXo28hdT-9sWe6jiFR3/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "volta al mon, 70, giritos",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 45,
+    "url": "https://drive.google.com/file/d/1d8E37cpyYPEpoH5gR48vcGmX-JTQx4t_/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Vuelta al mundo, pasa por detras, con cosas dificiles",
+    "artistas": [
+      "Angel",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 46,
+    "url": "https://drive.google.com/file/d/1UcHqCGb-6rKXjy4G12Wz2RN4uRysOZji/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Vuelta chica simple",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 47,
+    "url": "https://drive.google.com/file/d/1Xfy_3E6faqJnP0OeUvbnTCywu6v_iRpK/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Vuelta chico vuelta chica",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 48,
+    "url": "https://drive.google.com/file/d/1gnFsmA-6uo8BKiw63S8XDaT4MQI_J2qb/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Vueltas y giros",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 49,
+    "url": "https://drive.google.com/file/d/143un84abOYF_4KWQEcRIqgVeZ7hab2Vc/view?usp=sharing",
+    "estilo": "Salsa",
+    "subestilo": "Línea",
+    "nombre": "Cross con cambio de sentido y peonza",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 50,
+    "url": "https://drive.google.com/file/d/1bHS7xrlh48YIWi4r6fm-e9Scbsgra6Mc/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Corporal onda MataLeon DJ Retorno",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 51,
+    "url": "https://drive.google.com/file/d/1k6Ie5332vp4324iSHrxedpRUs4CGhYI7/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Contragiro doble con cabeza extraña",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 52,
+    "url": "https://drive.google.com/file/d/1HJrauA0s6aQH53qss11DhsA2fjceeqf_/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Enculada reloj y volver",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 53,
+    "url": "https://drive.google.com/file/d/1n9N-3qGnJEg8GDWLLgKD42xNIL5xE696/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Rompe media giro lanza lanza gira",
+    "artistas": [
+      "Carlos DK",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 54,
+    "url": "https://drive.google.com/file/d/1Al3WZI0K68vq9nZA8DSMbcu8ZbUg9cf8/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Sensual",
+    "nombre": "Taller Adrian y Nayara",
+    "artistas": [
+      "Adrián",
+      "Nayara"
+    ],
+    "lugar": "Manisero"
+  },
+  {
+    "id": 55,
+    "url": "https://drive.google.com/file/d/1LALlVKuDHa1Ekpy28H8ui8gRBQjxPBCX/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Taller Fiesta Harmony",
+    "artistas": [
+      "Alvaro",
+      "Laura"
+    ],
+    "lugar": "Taller"
+  },
+  {
+    "id": 56,
+    "url": "https://drive.google.com/file/d/1-VYNuOOo4KULD1UQDeBE7aj9yGjAv_gW/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Apertura desnucada",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 57,
+    "url": "https://drive.google.com/file/d/1OOe2WK8HLOZBtuUp-8zWe9HOKmftssYu/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "El brazo sin la honda",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 58,
+    "url": "https://drive.google.com/file/d/1jpYZprXozecgmIulECDjEJ7YjnEvOm66/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "El brazo escopeta",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 59,
+    "url": "https://drive.google.com/file/d/1LEbXE549lIKrg6KG3mpePNP4hzKEfJK3/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Corporal con vuelta dificil de mandar",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 60,
+    "url": "https://drive.google.com/file/d/1MDz9VIIHTRbU7bD_OGjMoXT131eVs1QY/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Corporal caida DJ cambre onda cambre",
+    "artistas": [
+      "Jon",
       "Gemma"
     ],
     "lugar": "Harmony"
