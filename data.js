@@ -6,7 +6,7 @@ const videos = [
     profesores: ["Adrián", "Aroa"],
     tipo: "Figura",
     tags: [],
-    url: "https://drive.google.com/file/d/19b5CAl-BxzVrmfuTfng-OTkVfgkAfzI1/view?usp=sharing"
+    url: "https://drive.google.com/drive/folders/1O9IiAqUd--go5QffD8kVnv2s1Bjm0kxf?hl=es-419"
   },
   {
     id: 2,
