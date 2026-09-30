@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#111111">
   <title>Videoteca del Baile</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 <header>
@@ -16,7 +16,12 @@
   <input id="search" class="search" type="search" placeholder="Buscar nombre, artista, estilo, lugar..." autocomplete="off">
   <div class="filters" id="filtroEstilo"></div>
   <div class="filters" id="filtroSubestilo"></div>
-  <div class="filters" id="filtroArtista"></div>
+  <div class="artist-filter">
+      <span class="artist-label">Artista:</span>
+      <div class="artist-select-wrap">
+        <select id="filtroArtista" class="artist-select" aria-label="Filtrar por artista"></select>
+      </div>
+    </div>
   <div id="count" class="count"></div>
   <div id="grid" class="grid"></div>
 </main>
@@ -86,10 +91,31 @@ function crearBotones(el, valores, tipo, etiqueta) {
     el.appendChild(b);
   });
 }
+function renderArtistas() {
+  const artistas = valoresDisponibles("artista");
+  const valorActual = seleccion.artista;
+
+  filtroArtista.innerHTML = "";
+
+  const todos = document.createElement("option");
+  todos.value = "Todos";
+  todos.textContent = "Todos los artistas";
+  filtroArtista.appendChild(todos);
+
+  artistas.forEach(artista => {
+    const option = document.createElement("option");
+    option.value = artista;
+    option.textContent = artista;
+    filtroArtista.appendChild(option);
+  });
+
+  filtroArtista.value = artistas.includes(valorActual) ? valorActual : "Todos";
+}
+
 function renderFiltros(){
   crearBotones(filtroEstilo,valoresDisponibles("estilo"),"estilo","Estilo");
   crearBotones(filtroSubestilo,valoresDisponibles("subestilo"),"subestilo","Subestilo");
-  crearBotones(filtroArtista,valoresDisponibles("artista"),"artista","Artista");
+  renderArtistas();
 }
 function renderVideos(){
   const resultados=videos.filter(v=>coincideFiltros(v)&&coincideTexto(v,search.value.trim()));
@@ -128,6 +154,12 @@ function renderVideos(){
 }
 function actualizar(){ normalizarSeleccion(); renderFiltros(); renderVideos(); }
 search.addEventListener("input",renderVideos);
+
+filtroArtista.addEventListener("change", () => {
+  seleccion.artista = filtroArtista.value;
+  actualizar();
+});
+
 actualizar();
 </script>
 </body>
