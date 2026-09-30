@@ -729,7 +729,7 @@ const videos = [
     "subestilo": "Fusión",
     "nombre": "Vuelta chico enrosca ondas… poca gracia",
     "artistas": [
-      "Carlos DK",
+      "Carlos",
       "Laura Karma"
     ],
     "lugar": "Karma"
@@ -741,7 +741,7 @@ const videos = [
     "subestilo": "Fusión",
     "nombre": "lo mismo vuelta chico enrosca lanzada",
     "artistas": [
-      "Carlos DK",
+      "Carlos",
       "Laura Karma"
     ],
     "lugar": "Karma"
@@ -764,7 +764,7 @@ const videos = [
     "subestilo": "Sensual",
     "nombre": "Taller en el Sabaki",
     "artistas": [
-      "Carlos DK",
+      "Carlos",
       "Helena Guapa"
     ],
     "lugar": "Taller"
@@ -776,9 +776,424 @@ const videos = [
     "subestilo": "Sensual",
     "nombre": "Taller en en tu salsa",
     "artistas": [
-      "Carlos DK",
+      "Carlos",
       "Helena Guapa"
     ],
     "lugar": "ETS"
+  },
+  {
+    "id": 66,
+    "url": "https://drive.google.com/file/d/1CE9ovaJ7A4G_M4U_xSKX-Dd7XT4VMChZ/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Giro de dificil marcaje",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 67,
+    "url": "https://drive.google.com/file/d/1uUrzBXanZpLgaGegJQ6GQMsOe9kxG_qR/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Vuelta con direcciones brazos, mini DJ y perreo",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 68,
+    "url": "https://drive.google.com/file/d/1ThvOsQ1P1kdnpIp8I23zVMg5evpdJEjb/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "vuelta chic amni Dj corporales",
+    "artistas": [
+      "Jon",
+      "Ceci"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 69,
+    "url": "https://drive.google.com/file/d/1a9r9CVpYHHo8ifOJe_tP7rMa499TBCx0/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Tradicional",
+    "nombre": "Dominicana muy sencillita",
+    "artistas": [
+      "Sebas",
+      "Lucia"
+    ],
+    "lugar": "Congreso"
+  },
+  {
+    "id": 70,
+    "url": "https://drive.google.com/file/d/1_A8Df5CaSuqf_91cZeTYWAvq159RFPpO/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Sensual",
+    "nombre": "El brazo girado pero salida rapida",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 71,
+    "url": "https://drive.google.com/file/d/1LkRLZ6v35ZhtzrYE1KwDKXEizqfn_SE4/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Rompe que va pero vuelve",
+    "artistas": [
+      "Carlos",
+      "Helena Guapa"
+    ],
+    "lugar": "ETS"
+  },
+  {
+    "id": 72,
+    "url": "https://drive.google.com/file/d/1EC57tp7Nrg6dSs0edSDlavN9zr_Uy8Qs/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Figuritas jugonas para el social",
+    "artistas": [
+      "Gaby",
+      "Estefy"
+    ],
+    "lugar": "Congreso"
+  },
+  {
+    "id": 73,
+    "url": "https://drive.google.com/file/d/1k2Akqpj_n0DDMd_CfmlBAUDPZXhse2NY/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Lanzada cabeza y enroscar",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 74,
+    "url": "https://drive.google.com/file/d/1b-aNmb7fAKTuEW5_enZtAS29Rf2hb7aF/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "pasar de media a lanzada",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 75,
+    "url": "https://drive.google.com/file/d/1k-2HtHOyM7vuYoXuGEamAUHFoFj-broX/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Intensivo Basico Social",
+    "artistas": [
+      "Kike",
+      "Ceci"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 76,
+    "url": "https://drive.google.com/file/d/1luaAsBw4N3_Ct3Yc6EMJUVPTYzYUhcl1/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Intensivo nivel 0",
+    "artistas": [
+      "Kike",
+      "Ceci"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 77,
+    "url": "https://drive.google.com/file/d/1jFbwYv_J_9-WyhaQaTSYV8yKfU5hfzV9/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Material para intros a 2ble tiempo",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 78,
+    "url": "https://drive.google.com/file/d/1HNPuzf_C_213sb-iYB9mW2SK1QWZrRrR/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "manitas de relleno y enrosca con salida",
+    "artistas": [
+      "Carlos",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 79,
+    "url": "https://drive.google.com/file/d/1ysrUMFbKlUXSmgfuRV9CODFzByyoW9Nf/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "vuelta cambio mano enrosca swivel salida",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 80,
+    "url": "https://drive.google.com/file/d/1YrKYSjjNuzCxkDaFwfGZSebJES_pjh0U/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "lanza por atrás sombra y camara lenta",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 81,
+    "url": "https://drive.google.com/file/d/1sB18WV1KMqPWmUvuBOgfuXuqMP-qJK9l/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Lanzada Conri peinada",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 82,
+    "url": "https://drive.google.com/file/d/1qos1eHHEquSoviiia5kLriIdmM7zTcq4/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Conri Style",
+    "nombre": "Lanzada devuelta",
+    "artistas": [
+      "Jon",
+      "Gemma"
+    ],
+    "lugar": "Taller"
+  },
+  {
+    "id": 83,
+    "url": "https://drive.google.com/file/d/1xm-AkzBHz2zTE2tvIl_zqsc2xrXyt3X0/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "madrid cabeza chico y lanzada abrazo",
+    "artistas": [
+      "Carlos",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 84,
+    "url": "https://drive.google.com/file/d/1_h58dgZldGusPh41vMtwpENY6gqebZpR/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "gira chico gira chica onda…. Clasico",
+    "artistas": [
+      "Carlos",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 85,
+    "url": "https://drive.google.com/file/d/1QJohEW02n5eCQux8GeU-T1gfpHeIgDe8/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Cuadrado adornado y vuelta",
+    "artistas": [
+      "Carlos",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 86,
+    "url": "https://drive.google.com/file/d/1g6syliWDDbkdKuz-IKEkU91euMcIAaqG/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Una Master class",
+    "artistas": [
+      "Evelyn"
+    ],
+    "lugar": "Congreso"
+  },
+  {
+    "id": 87,
+    "url": "https://drive.google.com/file/d/1VIDCT7SBkQoYxvLh8-QcML1LLtxCpDIU/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Popiwa",
+    "nombre": "Bachata esencials",
+    "artistas": [
+      "Tigere",
+      "Bianca"
+    ],
+    "lugar": "Congreso"
+  },
+  {
+    "id": 88,
+    "url": "https://drive.google.com/file/d/19psezzCAMaBpmb0Dn8-yjGXO7MpbFsfY/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "media y lanzada",
+    "artistas": [
+      "Carlos",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 89,
+    "url": "https://drive.google.com/file/d/19MMHixvxpChTBfUmUMX-4lmE43UhmuzG/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "enrrosca manitas…",
+    "artistas": [
+      "Carlos",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 90,
+    "url": "https://drive.google.com/file/d/16_iGQ4cHXmSIbi9_MFigxdCCdMOpL-ru/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "lanzada devuleta y lanzamientos de mano",
+    "artistas": [
+      "Nico",
+      "Laura Karma"
+    ],
+    "lugar": "Taller"
+  },
+  {
+    "id": 91,
+    "url": "https://drive.google.com/file/d/1zT9oBSiAYwXK_N9rWQoaQa1JH4SvFGYe/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Evelyn pasitos 1",
+    "artistas": [
+      "Evelyn"
+    ],
+    "lugar": "Congreso"
+  },
+  {
+    "id": 92,
+    "url": "https://drive.google.com/file/d/1yyU920lb2IzMk2bDui3X3069Zmn8wFeh/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Evelyn pasitos 2",
+    "artistas": [
+      "Evelyn"
+    ],
+    "lugar": "Congreso"
+  },
+  {
+    "id": 93,
+    "url": "https://drive.google.com/file/d/1_CMHIQDpsFIX98kPCUyuJLgTiQylGDck/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Evelyn pasitos 3",
+    "artistas": [
+      "Evelyn"
+    ],
+    "lugar": "Congreso"
+  },
+  {
+    "id": 94,
+    "url": "https://drive.google.com/file/d/150jUdNwCeIaQ6iFKbOVXbBlKczZb1PXU/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Taller Nico y Laura",
+    "artistas": [
+      "Nico",
+      "Laura Karma"
+    ],
+    "lugar": "ETS"
+  },
+  {
+    "id": 95,
+    "url": "https://drive.google.com/file/d/1CVlN5GNEfbRnsSZ3rtlMTI9tGajMwWf1/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Otro Taller Nico y Laura",
+    "artistas": [
+      "Nico",
+      "Laura Karma"
+    ],
+    "lugar": "ETS"
+  },
+  {
+    "id": 96,
+    "url": "https://drive.google.com/file/d/16u7Fp6zQI3bdy5sqFyPUI4apBerIIXPy/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Media lanzada y peinadas…",
+    "artistas": [
+      "Carlos",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 97,
+    "url": "https://drive.google.com/file/d/19KvAQkXBCAgWR5_HXuCljouj7bzDmnGA/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Tradicional",
+    "nombre": "Es un reel que me gustó",
+    "artistas": [
+      "Sebas",
+      "Lucia"
+    ],
+    "lugar": "Taller"
+  },
+  {
+    "id": 98,
+    "url": "https://drive.google.com/file/d/1yhfPpO4wLFL9TVqYO7_Y3Pv_MIphPdTm/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "1a clase de Bascios",
+    "artistas": [
+      "Kike",
+      "Ceci"
+    ],
+    "lugar": "Harmony"
+  },
+  {
+    "id": 99,
+    "url": "https://drive.google.com/file/d/1q7gTnPI7QFUtFkOA0ZJ2Nn9_np1z2D13/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Popiwa",
+    "nombre": "Pasitos Lady",
+    "artistas": [
+      "La Alemana"
+    ],
+    "lugar": "Congreso"
+  },
+  {
+    "id": 100,
+    "url": "https://drive.google.com/file/d/1tY6KsG1HDfJcrs1OIcffUJDwkgg_thbb/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Media lanzada y peinadas…",
+    "artistas": [
+      "Rafa",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
   }
 ];
