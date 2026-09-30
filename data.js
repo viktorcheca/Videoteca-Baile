@@ -721,5 +721,64 @@ const videos = [
       "Gemma"
     ],
     "lugar": "Harmony"
+  },
+  {
+    "id": 61,
+    "url": "https://drive.google.com/file/d/1_Q9NP1o_PhKZrlF3rlZbWZHySXpfSWDm/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "Vuelta chico enrosca ondas… poca gracia",
+    "artistas": [
+      "Carlos DK",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 62,
+    "url": "https://drive.google.com/file/d/13hdw3D1lDYYYa7I8PGPq6i9lEfYUpj2V/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Fusión",
+    "nombre": "lo mismo vuelta chico enrosca lanzada",
+    "artistas": [
+      "Carlos DK",
+      "Laura Karma"
+    ],
+    "lugar": "Karma"
+  },
+  {
+    "id": 63,
+    "url": "https://drive.google.com/file/d/1Nh_k2lK3VhbdzmxOMl2wmkaOnR57DIze/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Sensual",
+    "nombre": "Taller raro de Damago",
+    "artistas": [
+      "Damago"
+    ],
+    "lugar": "ETS"
+  },
+  {
+    "id": 64,
+    "url": "https://drive.google.com/file/d/1OWeT2F4012IQk4wC-2gAVu37ZFw_enEa/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Sensual",
+    "nombre": "Taller en el Sabaki",
+    "artistas": [
+      "Carlos DK",
+      "Helena Guapa"
+    ],
+    "lugar": "Taller"
+  },
+  {
+    "id": 65,
+    "url": "https://drive.google.com/file/d/1YTlZAV_Rr-LJtqynW37kdVcLPr0yjDKh/view?usp=sharing",
+    "estilo": "Bachata",
+    "subestilo": "Sensual",
+    "nombre": "Taller en en tu salsa",
+    "artistas": [
+      "Carlos DK",
+      "Helena Guapa"
+    ],
+    "lugar": "ETS"
   }
 ];
